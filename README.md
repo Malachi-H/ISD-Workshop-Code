@@ -10,11 +10,11 @@ This repository contains progressive weekly exercises for building a **Project M
 |------|----------------|--------------|
 | **4** | Frontend Basics | HTML forms, CSS Styling, JavaScript DOM, Navigation Parameters, Frontend `sessionStorage` |
 | **5** | Flask Backend & Unit Testing | Flask, API Endpoints, `unittest` |
-| **6** | Database & E2E Testing | Relational Database, SQLite, `sqlite3`, E2E Testing with Selenium |
+| **6** | Database Design & Database Server | Relational Database, SQLite, `sqlite3`, E2E Testing with Selenium |
 | **7** | Model of MVC | Model-View-Controller (MVC), Data Access Layer (DAL), Flask Blueprint, Admin Functionality (API Key) |
 | **8** | Controller of MVC | Controller, Data Access Object (DAO), API Testing |
 | **9** | Frontend-Backend Integration | `fetch()`, CORS, Backend `session`, UML Sequence Diagram |
-| **10** | Extending the Data Model & Software Features | Projects, Allocations, Entity-Relationship-Diagram (ERD) |
+| **10** | Extending Software Features & E2E Testing | Projects, Allocations, Entity-Relationship-Diagram (ERD) |
 | **11** | React Frontend | React Components, React Router, State Management |
 
 ---
@@ -90,6 +90,11 @@ Open your browser at: `http://127.0.0.1:8000`
 python -m unittest backend/tests/test_app.py
 ```
 
+### Run API Tests
+``` bash
+python -m unittest backend/tests/test_auth_api.py
+```
+
 ### Run E2E Tests
 ``` bash
 python -m unittest frontend/tests/e2e/test_login_e2e.py
@@ -105,7 +110,7 @@ npm run dev
 
 Alternatively, to run it in the `weekX/` folder,
 
-```
+``` bash
 npm --prefix ./frontend-react run dev
 ```
 
@@ -142,12 +147,12 @@ npm --prefix ./frontend-react run dev
 
 **Learning Goals:**
 - Python classes and objects
-- Writing unit tests with `unittest`
-- Test-driven development concepts
+- Managing tests with `unittest`
+- Test-driven development (TDD) concepts
 
 ---
 
-### Week 6: Database & E2E Testing
+### Week 6: Database Design & Database Server
 
 **Focus:** SQLite database connection
 
@@ -222,7 +227,7 @@ npm --prefix ./frontend-react run dev
 
 ---
 
-### Week 10: Extending the Data Model & Software Features
+### Week 10: Extending Software Features & E2E Testing
 
 **Focus:** Complete project management system
 
@@ -230,6 +235,7 @@ npm --prefix ./frontend-react run dev
 - Project management (CRUD)
 - Student-to-project allocations
 - Admin-only operations
+- E2E testing in Selenium
 
 **Key Files:**
 - `backend/routes/projects.py` - Project endpoints
@@ -238,9 +244,8 @@ npm --prefix ./frontend-react run dev
 - `frontend/project-form.js` - Create/Edit projects
 
 **Learning Goals:**
-- Multi-table relationships
 - Role-based access (admin vs student)
-- Complex CRUD operations
+- E2E testing in Selenium
 
 ---
 
@@ -250,9 +255,7 @@ npm --prefix ./frontend-react run dev
 
 **Key Files:**
 - `frontend-react/src/App.jsx` - React Router setup
-- `frontend-react/src/components/Login.jsx` - Login component
-- `frontend-react/src/components/Register.jsx` - Registration component
-- `frontend-react/src/components/ProjectDashboard.jsx` - Project list
+- `frontend-react/src/components/*`
 
 **Learning Goals:**
 - React functional components
