@@ -100,6 +100,11 @@ python -m unittest backend/tests/test_auth_api.py
 python -m unittest frontend/tests/e2e/test_login_e2e.py
 ```
 
+### Automatically run all test scripts in a folder
+``` bash
+python -m unittest discover -s <folder-name>
+```
+
 ### Week 11 - React Frontend
 
 ```bash
