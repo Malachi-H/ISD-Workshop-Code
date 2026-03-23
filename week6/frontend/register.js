@@ -6,29 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const emailError = document.getElementById("email-error");
-    const passwordError = document.getElementById("password-error");
-    const tosCheckbox = document.getElementById("tos-checkbox");
 
-    // if tos not checked, alert user
-    if (!tosCheckbox.checked) {
-        alert("You must agree to the Terms of Service.");
-        return;
-    }
+    // Option 1: storing data in the url (exposing sensitive info)
+    // if (name.trim() === "" || email.trim() === "") {
+    //   alert("Please enter your name and email.");
+    // } else {
+    //   // Redirect to welcome page with name in URL
+    //   window.location.href = `welcome.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
+    // }
 
-    // if name, email or password is empty, alert user
-    if (name.trim() === "") {
-        alert("Please enter your name.");
-        return;
-    } else if (email.trim() === "") {
-        emailError.textContent = "Please enter your email.";
-        return;
-    } else if (password.trim() === "") {
-        passwordError.textContent = "Please enter your password.";
-        return;
-    }
-
+    // Option 2: storing data in sessionStorage
     const user = {"name":name, "email":email}
     sessionStorage.setItem("user", JSON.stringify(user))
     window.location.href = "welcome.html"

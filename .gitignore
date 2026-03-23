@@ -17,10 +17,12 @@ dist/
 # local stuffs/under development
 **/explanation.md
 **/db_showall.py
+**/db_showallschema.py
 **/db_showallusers.py
 **/db_projects_allocations.py
 **/db_modify_allocations.py
 **/app.db
+**/app_test.db
 **/db_modify_projects.py
 **/frontend-old/
 **/venv/
@@ -30,8 +32,7 @@ week10/backend/tests/
 week11/backend/tests/
 **/e2e_testrunner/
 **/frontend/tests/unit/
-*_api.sh
-*.test.js
+**/*_api.sh
+**/*.test.js
 document_tests/
-*/db_init.py
 **/welcome.py
